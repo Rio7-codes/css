@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 9px;
+            position: relative; /*IMPORTANT!!!*/
+
+            animation: box1 2s ease-in-out 1s infinite alternate;
+        /*  animation-name: move;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;   */
+        }
+        #box1 {
+            background-color: orchid;
+        }
+        #box2 {
+            background-color: lime;
+            animation: box2 3s steps(25) 1s infinite alternate-reverse;
+        }
+        @keyframes box1 {
+            from {left: 10px;}
+            to {left: 400px;}
+        }
+        @keyframes box2 {
+            0% {left: 10px; top: 10px;}
+            16% {left: 100px; top: 100px;}
+            32% {left: 100px; top: 10px;}
+            48% {left: 200px; top: 100px;}
+            64% {left: 200px; top: 10px;}
+            80% {left: 400px; top: 100px;}
+            100% {left: 400px; top: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Animation</div>
+    <div id="box2" class="box">Animation</div>
+</body>
+</html>
