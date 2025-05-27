@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .pad {
+            height: 60px;
+            width: 60px;
+        }
+        #first {
+            color: blueviolet;
+            background-color: black;
+            margin: 5px 5px 5px 5px;
+            border:5px dashed green;
+            padding: 5px;
+        }
+        #second{
+            color: brown;
+            background-color:chartreuse;
+            margin: 5px;
+            border: 10px solid rebeccapurple;
+            border-radius: 10px 30px 10px 10px;
+            padding: 5px;
+        }
+        #third{
+            color:darkorange;
+            background-color:darkturquoise;
+            margin: 5px;
+            border: 10px dotted rebeccapurple;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="pad">Padding checker</div>
+    <div id="second" class="pad">Margin Distance checker</div>
+    <div id="third" class="pad">Border checker</div>
+</body>
+</html>
