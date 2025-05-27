@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Practice</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+        .container {
+            margin: 0 auto;
+            height: 38px;
+            width: 550px;
+            border: 6px solid black;
+            border-radius: 30px;
+            position: relative;
+            display: flex;
+            justify-self: center;
+            background-color: purple;
+            overflow: hidden;    /*IMPORTANT!!!*/
+        }
+        .bar {
+            height: 100%;
+            width: 0%;
+            border-radius: 30px;
+            background-image: repeating-linear-gradient(
+             45deg,
+             #c75acd 10%,
+             #470053 10%,
+             #ffabff 10%,
+             #ab51ae 20%
+            );
+            background-size: 40px 40px;
+            background-position: 0 0;
+            animation:
+            progress 15s ease-in-out 1.5s infinite,
+            moveSlashes 1s linear 0s infinite;
+}
+
+        @keyframes moveSlashes {
+        from {background-position: 0 0;}
+        to {background-position: 100px 0;}
+        }
+        @keyframes progress {
+            0% {width: 0%;}
+            50% {width: 50%;}
+            80% {width: 80%;}
+            90% {width: 90%;}
+            100% {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Progress Bar</b></h1>
+    <div class="container">
+        <div class="bar"></div>
+    </div>
+</body>
+</html>
