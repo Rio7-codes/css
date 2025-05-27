@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        .butn {
+            background-color: aqua;
+            border: 3px solid black;
+            border-radius: 18%;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            height: 80px;
+            width: 200px;
+            flex-shrink: 1;
+            justify-content: center;
+            align-items: center;
+            transition: all 1.2s ease-in-out 0.3s;
+        /*  transition-property: all;
+            transition-duration: 1.2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.3s;   */         
+        }
+        .butn:hover {
+            background-color: lime;
+            border: 5px solid indigo;
+            height: 100px;
+            width: 220px;
+            flex-shrink: 0.8;
+            font-size: 35px;
+        }
+        .butn:active {
+            background-color:rgb(31, 31, 31);
+            color: aliceblue;
+            border: 5px dotted blueviolet;
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="butn">Click Me!
+        <a href="https://www.youtube.com/">
+            <img src="youtube-logo-png-46019.png" alt="Youtube.com">
+        </a>
+    </div>
+</body>
+</html>
