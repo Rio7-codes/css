@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        nav {
+            height: 23px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: greenyellow;
+        }
+        #image {
+            height: 300px;
+            width: 700px;
+            background-color:darkmagenta ;
+            border: 4px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Container {
+            height: 250px;
+            width: 600px;
+            border: 5px solid black;
+            display: flex;
+        }
+        .box {
+            margin: 5px;
+            border: 3px solid black;
+            font-size: 20px;
+            text-align: center;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+            flex: 1;
+        }
+        #box1 {
+            background-color: crimson;
+        }
+        #box2 {
+            background-color:cornflowerblue;
+        }
+        #box3 {
+            background-color:lawngreen;
+            flex: 2;
+        }
+        .m {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            border: 4px solid black;
+        }
+        #media  {
+            background-color: green;
+        }
+        @media screen and (min-width: 300px) and (max-width: 400px) {
+            #media {
+            background-color: red;
+            }
+        }
+        @media screen and (min-width: 400px) {
+            #media {
+            background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">One</a>
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+        <a href="#">Four</a>
+    </nav>
+    <div id="image">
+        <img src="myntra.webp">
+    </div><br>
+    <div id="boxes" class="Container">
+        <div id="box1" class="box">Box 1</div>
+        <div id="box2" class="box">Box 2</div>
+        <div id="box3" class="box">Box 3</div>
+    </div><br>
+    <div id="media" class="m">Media Box</div>
+</body>
+</html>
